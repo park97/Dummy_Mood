@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daily Mood Tracker</title>
+  <style>
+    body {
+      font-family: 'Helvetica', sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f5f7fa;
+    }
+    input, button {
+      padding: 12px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    h1 {
+      color: #444;
+    }
+    #message {
+      margin-top: 30px;
+      font-size: 20px;
+      color: #007acc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>How are you feeling today?</h1>
+  <input type="text" id="moodInput" placeholder="e.g., happy, tired, excited">
+  <br>
+  <button onclick="showMood()">Submit</button>
+
+  <p id="message"></p>
+
+  <script>
+    function showMood() {
+      const mood = document.getElementById("moodInput").value.toLowerCase();
+      const message = document.getElementById("message");
+
+      if (mood === "happy") {
+        message.textContent = "Yay! Keep shining 🌞";
+      } else if (mood === "tired") {
+        message.textContent = "Take a rest. You deserve it 💆‍♂️";
+      } else if (mood === "excited") {
+        message.textContent = "Go seize the day! 🚀";
+      } else {
+        message.textContent = "Thank you for sharing. Wishing you a peaceful day 💖";
+      }
+    }
+  </script>
+
+</body>
+</html>
